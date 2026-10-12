@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F9F8F6;
+    color: #1C1917;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+code, pre {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+    :root {
+        --background: 36 25% 97%;
+        --foreground: 24 10% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 24 10% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 24 10% 10%;
+        --primary: 11 56% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 30 15% 95%;
+        --secondary-foreground: 24 10% 20%;
+        --muted: 30 10% 95%;
+        --muted-foreground: 25 5% 45%;
+        --accent: 22 65% 64%;
+        --accent-foreground: 24 10% 10%;
+        --destructive: 0 45% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 30 8% 90%;
+        --input: 30 8% 90%;
+        --ring: 11 56% 50%;
+        --chart-1: 11 56% 50%;
+        --chart-2: 145 14% 49%;
+        --chart-3: 32 64% 56%;
+        --chart-4: 210 31% 42%;
+        --chart-5: 22 65% 64%;
+        --radius: 0.625rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #F4F2EF;
+}
+::-webkit-scrollbar-thumb {
+    background: #D6D3D1;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A8A29E;
+}
+
+.font-display {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Fade in animation */
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}

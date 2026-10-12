@@ -1,0 +1,124 @@
+{
+  "project_context": {
+    "app_type": "Dashboard / SaaS App (Gestão Operacional de Marmitaria)",
+    "target_audience": "Marmitaria owners, kitchen staff, delivery dispatchers",
+    "core_vibe": "Warm, efficient, organized, reliable, tactile.",
+    "language": "pt-BR"
+  },
+  "theme_and_archetype": {
+    "mode": "light",
+    "archetype": "1 (Organic & Earthy)",
+    "reasoning": "A food operations dashboard should avoid feeling like a sterile hospital or crypto exchange. We want a tactile, warm kitchen-management feel that pairs perfectly with food imagery."
+  },
+  "typography": {
+    "font_families": {
+      "headings": "Work Sans",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "rules": {
+      "anti_default": "Never use Inter, Roboto, or Open Sans for headings.",
+      "hierarchy": {
+        "h1": "text-3xl sm:text-4xl tracking-tight font-semibold text-stone-900",
+        "h2": "text-2xl sm:text-3xl tracking-tight font-medium text-stone-800",
+        "h3": "text-xl sm:text-2xl font-medium text-stone-800",
+        "h4": "text-lg font-medium text-stone-800",
+        "body": "text-base text-stone-600 leading-relaxed",
+        "small_labels": "text-xs tracking-[0.1em] uppercase font-semibold text-stone-500"
+      }
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "main": "#F9F8F6",
+        "card": "#FFFFFF",
+        "sidebar": "#F4F2EF"
+      },
+      "text": {
+        "primary": "#1C1917",
+        "secondary": "#57534E",
+        "muted": "#A8A29E"
+      },
+      "brand": {
+        "primary": "#C5533B",
+        "primary_hover": "#A6432E",
+        "accent": "#E28B61"
+      },
+      "status": {
+        "success": "#6B8E7B",
+        "success_bg": "#EEF3F0",
+        "warning": "#D99A45",
+        "warning_bg": "#FDF6EA",
+        "danger": "#B94B4B",
+        "danger_bg": "#FCEDED",
+        "info": "#4A6E8C",
+        "info_bg": "#EFF4F8"
+      },
+      "borders": "#E7E5E4"
+    },
+    "forbidden_colors": ["#9D4CDD", "#1B93A4", "#7351B7", "pure #000000", "pure #FFFFFF (except cards)"],
+    "rules": {
+      "tints": "Never use pure grey. Always use Tailwind 'stone' or 'orange/amber' tinted greys to maintain warmth.",
+      "contrast": "Text below 18px must have at least 4.5:1 ratio against background. Hover states must be explicitly defined."
+    }
+  },
+  "spacing_and_layout": {
+    "system": "Tailwind standard scale, but skewed towards generous padding for layout and dense padding for operational data.",
+    "dashboard_grid": {
+      "type": "Control Room Grid",
+      "rules": "Dense, scan-first layout. Top-left must show primary metric (Live Revenue/Orders). Use gap-4 or gap-6 for widgets.",
+      "cards": "Subtle roundness (rounded-xl max). 1px border-stone-200. Very soft ambient shadow (shadow-sm). Do NOT overuse cards. Use flat lists where volume is high (e.g., order queues)."
+    }
+  },
+  "components": {
+    "ui_library": "shadcn/ui (customized)",
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "install_command": "yarn add @phosphor-icons/react",
+      "weight": "regular or duotone"
+    },
+    "specific_customizations": {
+      "buttons": "rounded-lg, font-medium. Primary buttons use #C5533B. Avoid heavy shadows. Ensure explicit hover state.",
+      "inputs": "rounded-lg, border-stone-300, focus:ring-2 focus:ring-[#C5533B]/20 focus:border-[#C5533B].",
+      "badges": "Crucial for Order Status. Novo (Info), Em Preparo (Warning), Pronto (Success), Em Entrega (Brand/Accent), Concluído (Neutral Dark), Cancelado (Danger).",
+      "tables": "Go cardless for large datasets. Use border-collapse with border-b border-stone-200. Left-align text, right-align numbers/currency.",
+      "dialogs": "Use soft glassmorphism backdrop (backdrop-blur-sm bg-stone-900/40) for modals."
+    }
+  },
+  "motion": {
+    "rules": "Minimalist and functional. Micro-interactions for feedback.",
+    "hover_states": "Buttons and list items should have a fast background color transition (duration-200 ease-in-out).",
+    "page_transitions": "Fade in content on route change to avoid harsh jumps."
+  },
+  "assets": {
+    "images": {
+      "login_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/3902cf64-244c-4c85-b121-742028aab87f/images/cac5a669c2b1c379a713fded35cbcba22131ce47bdb6e0457b5e90a0ddec9160.png",
+        "usage": "Use as a full-bleed background for the login/auth split screen layout. Apply a slight gradient overlay (bg-stone-900/20) if text needs to go over it."
+      },
+      "product_placeholders": [
+        {
+          "url": "https://images.pexels.com/photos/30635705/pexels-photo-30635705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "usage": "Bento box / Marmita product thumbnail"
+        },
+        {
+          "url": "https://images.pexels.com/photos/30635717/pexels-photo-30635717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "usage": "Meal prep / Marmita thumbnail"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1626379907504-327b925f4b79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxicmF6aWxpYW4lMjBoZWFsdGh5JTIwZm9vZCUyMG1lYWwlMjBwcmVwfGVufDB8fHx8MTc4MDIzNjUxMnww&ixlib=rb-4.1.0&q=85",
+          "usage": "General food dish thumbnail"
+        }
+      ]
+    }
+  },
+  "instructions_to_main_agent": {
+    "tech_stack": "React.js (.js/.jsx files only, NO TypeScript), Tailwind CSS, shadcn/ui.",
+    "testing_requirements": "CRITICAL: All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='login-submit-button', data-testid='order-status-badge').",
+    "architecture": "Build a layout with a fixed left Sidebar and a scrolling main content area. Implement an intuitive 'Kanban' or 'List' view for the active order queue.",
+    "language": "All UI text, labels, statuses, and dummy data MUST be in Brazilian Portuguese (pt-BR).",
+    "shadcn_usage": "Do NOT use raw HTML <select> or <input type='date'>. Always install and use shadcn/ui DropdownMenu, Select, Calendar, etc. Provide proper aria-labels.",
+    "mock_data": "Use the provided image URLs for product photos. Do not use generic placeholders like via.placeholder.com."
+  }
+}

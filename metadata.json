@@ -1,0 +1,11 @@
+{
+  "name": "Marmita Hub",
+  "description": "Sistema completo de gestão de pedidos, produtos, entregas, relatórios e atendimento por voz/IA para marmitarias.",
+  "requestFramePermissions": [
+    "microphone",
+    "bluetooth"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

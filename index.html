@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#C5533B" />
+    <meta name="description" content="Sistema completo de gestão de pedidos, produtos, entregas, relatórios e atendimento por voz/IA para marmitarias." />
+    <meta property="og:title" content="Marmita Hub" />
+    <meta property="og:description" content="Sistema completo de gestão de pedidos, produtos, entregas, relatórios e atendimento por voz/IA para marmitarias." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+    <title>Marmita Hub</title>
+    <script>
+      // Suppress benign ResizeObserver warning triggered by Radix UI components.
+      (function(){
+        var msgs=["ResizeObserver loop completed with undelivered notifications.","ResizeObserver loop limit exceeded"];
+        function silence(e){
+          var m = (e && (e.message || (e.reason && e.reason.message))) || "";
+          if(msgs.some(function(x){return m.indexOf(x) !== -1;})){
+            e.stopImmediatePropagation();
+            if(typeof e.preventDefault === "function") e.preventDefault();
+            return true;
+          }
+          return false;
+        }
+        window.addEventListener("error", silence, true);
+        window.addEventListener("unhandledrejection", silence, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>

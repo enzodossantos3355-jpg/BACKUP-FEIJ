@@ -1,0 +1,6 @@
+{
+  "summary": "Plano de implementação para conexão 100% real do WhatsApp via Baileys integrada diretamente no servidor Express e interface Web do Marmita Hub. Remove todas as conexões simuladas e botões falsos, gerando o QR Code oficial diretamente do protocolo WhatsApp para escaneamento pelo celular.",
+  "updatedAt": "2026-10-12T18:01:35.378417928Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
